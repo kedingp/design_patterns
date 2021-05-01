@@ -1,3 +1,3 @@
-#include "hello.h"
+#include "Hello_lib/hello.h"
 
 int main() { hello("CMake"); }

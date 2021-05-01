@@ -2,7 +2,7 @@
                           // in one cpp file
 #include "catch.hpp"
 
-#include "hello.h"
+#include "Hello_lib/hello.h"
 #include <iostream>
 #include <sstream>
 
