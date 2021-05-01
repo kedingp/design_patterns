@@ -3,6 +3,6 @@
 
 #include <string>
 
-void hello(std::string const& name);
+void hello(std::string const &name);
 
 #endif

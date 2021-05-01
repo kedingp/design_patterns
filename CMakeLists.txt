@@ -11,6 +11,9 @@ else()
     add_compile_options(-Wall -Wextra -pedantic -Werror)
 endif()
 
+set(gtest_force_shared_crt ON CACHE BOOL "" FORCE)
+
 add_subdirectory(thirdparty/catch)
+add_subdirectory(thirdparty/googletest)
 add_subdirectory(src)
 add_subdirectory(test)
