@@ -19,26 +19,14 @@ using State = std::variant<Off, Idle, ServingCoke>;
 // Tranistion
 class Transitions {
   public:
-    std::optional<State> operator()(const Off &, const PushOnOffButton &) {
-        std::cout << "Turn-on machine ...\n";
-        return Idle{};
-    }
+    std::optional<State> operator()(const Off &, const PushOnOffButton &);
 
-    std::optional<State> operator()(const Idle &, const PushCokeButton &) {
-        std::cout << "Start serving coke ...\n";
-        return ServingCoke{};
-    }
+    std::optional<State> operator()(const Idle &, const PushCokeButton &);
 
-    std::optional<State> operator()(const Idle &, const PushOnOffButton &) {
-        std::cout << "Turn-off machine ...\n";
-        return Off{};
-    }
+    std::optional<State> operator()(const Idle &, const PushOnOffButton &);
 
     std::optional<State> operator()(const ServingCoke &,
-                                    const PushCokeButton &) {
-        std::cout << "Stop serving coke ...\n";
-        return Idle{};
-    }
+                                    const PushCokeButton &);
 
     template <typename State_t, typename Event_t>
     std::optional<State> operator()(const State_t &, const Event_t &) const {
