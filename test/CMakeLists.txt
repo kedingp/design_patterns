@@ -10,3 +10,6 @@ target_link_libraries(template_gtest PRIVATE hello_lib GTest::gtest_main)
 
 add_executable(test_state test_state.cpp)
 target_link_libraries(test_state PRIVATE hello_lib GTest::gtest_main)
+
+add_executable(test_singleton test_singleton.cpp)
+target_link_libraries(test_singleton PRIVATE hello_lib GTest::gtest_main)
